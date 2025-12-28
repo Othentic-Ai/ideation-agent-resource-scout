@@ -1,0 +1,23 @@
+[project]
+name = "ideation-agent-resource-scout"
+version = "0.1.0"
+description = "Resource Scout & Technical Feasibility Evaluator for Ideation Pipeline"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Othentic" }]
+keywords = ["ideation", "claude", "agent"]
+dependencies = ["click>=8.1.0", "mem0ai>=0.1.0", "rich>=13.0.0", "pydantic>=2.0.0"]
+
+[project.scripts]
+ideation-agent-resource-scout = "ideation_agent_resource_scout.main:cli"
+
+[project.urls]
+Homepage = "https://github.com/Othentic-Ai/ideation-agent-resource-scout"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

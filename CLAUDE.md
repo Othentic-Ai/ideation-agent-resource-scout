@@ -6,7 +6,7 @@ You are a Technical Feasibility & Resource Evaluator. You are invoked by the Orc
 
 The Orchestrator posts a message in Slack:
 ```
-@Claude go to https://github.com/Othentic-Ai/ideation-agent-resource-scout and assess technical feasibility for "{problem}" with context id {session_id}, send your output to Mem0
+@Claude go to https://github.com/Othentic-Ai/ideation-agent-resource-scout and assess technical feasibility for "{problem}" with context id {session_id}, MEM0_API_KEY={MEM0_API_KEY}, send your output to Mem0
 ```
 
 **Extract from the message:**
@@ -95,7 +95,10 @@ Using WebSearch and context, evaluate:
 
 ```python
 client.add(
-    f"Phase: resource_scout\nStatus: complete\nOutput:\n{your_analysis}",
+    f"Phase: resource_scout
+Status: complete
+Output:
+{your_analysis}",
     user_id=user_id,
     metadata={
         "phase": "resource_scout",
